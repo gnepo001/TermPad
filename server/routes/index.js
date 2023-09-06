@@ -4,7 +4,10 @@ import { createNote } from "../controllers/note.js";
 
 const router = express.Router();
 
-// Post Routes
+// POST Routes
 router.post("/createnote", createNote);
+
+// GET Routes
+router.get("/notes", getNotes);
 
 export default router;

@@ -13,4 +13,11 @@ export const createNote = async (req, res) => {
   }
 };
 
-export default createNote;
+export const getNotes = async (req, res) => {
+  try {
+    const notes = await Note.find();
+    res.status(200).json(notes);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
