@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 import Note from "../models/note.js";
 
-export const createPost = async (req, res) => {
+export const createNote = async (req, res) => {
   const data = req.body;
   const newNote = new Note(data);
   try {
@@ -12,3 +12,5 @@ export const createPost = async (req, res) => {
     res.status(409).json({ message: error.message });
   }
 };
+
+export default createNote;

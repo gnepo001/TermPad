@@ -7,15 +7,16 @@ const noteSchema = new mongoose.Schema(
       required: true,
     },
     author: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: String,
+      //type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-  },
-  {
-    //assigns createdAt and updateAt fields with a data type
-    timestamps: true,
   }
+  // {
+  //   //assigns createdAt and updateAt fields with a data type
+  //   timestamps: true,
+  // }
 );
 
 const Note = mongoose.model("Note", noteSchema);

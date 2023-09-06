@@ -5,6 +5,6 @@ import { createNote } from "../controllers/note.js";
 const router = express.Router();
 
 // Post Routes
-router.post("/note", createNote);
+router.post("/createnote", createNote);
 
 export default router;
