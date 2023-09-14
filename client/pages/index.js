@@ -11,33 +11,36 @@ const index = ({ posts }) => {
   });
 
   const handleSumbit = (e) => {
-    createPost(form);
     e.preventDefault();
+    createPost(form);
   };
 
   return (
     <div>
-      <h1 className="text-xl font-bold text-yellow-300">Testing</h1>
+      <h1 className="text-xl font-bold text-[#66FF66]">TERMINAL</h1>
       <p className="text-yellow-200">
         Testing to make sure everything is working, had trouble with new nextjs
         app verions
       </p>
-      <form onSubmit={handleSumbit}>
-        <label>Note</label>
+      <div>
+        <div className="flex flex-row bg-[#1b9486] text-black px-5">Notes</div>
+        <Notes notes={posts} />
+      </div>
+
+      <form onSubmit={handleSumbit} className="bg-black">
+        {/* <label>Note</label> */}
         <input
           required
           type="text"
           id="note"
           name="note"
-          placeholder="note"
+          placeholder="user - input"
+          className="text-[#66FF66] ml-5 bg-black"
           //value={form.content}
           onChange={(e) => setForm({ ...form, content: e.target.value })}
         />
-        <button>Create Note</button>
+        <button className="ml-5">Create Todo</button>
       </form>
-      <div>
-        <Notes notes={posts} />
-      </div>
     </div>
   );
 };
