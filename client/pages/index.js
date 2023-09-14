@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import { createPost } from "../api/index.js";
+import { Notes } from "../components/index.js";
 
-const index = () => {
+const index = ({ posts }) => {
   const [form, setForm] = useState({
     content: "",
     author: "test",
@@ -34,8 +35,20 @@ const index = () => {
         />
         <button>Create Note</button>
       </form>
+      <div>
+        <Notes notes={posts} />
+      </div>
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const posts = await axios.get("http://localhost:5010/notes");
+  return {
+    props: {
+      posts: posts.data,
+    },
+  };
 };
 
 export default index;
