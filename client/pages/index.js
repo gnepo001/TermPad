@@ -18,7 +18,7 @@ const index = ({ posts }) => {
   return (
     <div>
       <h1 className="text-xl font-bold text-[#66FF66]">TERMINAL</h1>
-      <p className="text-yellow-200">
+      <p className="text-yellow-200 mb-5">
         Testing to make sure everything is working, had trouble with new nextjs
         app verions
       </p>
@@ -27,7 +27,7 @@ const index = ({ posts }) => {
         <Notes notes={posts} />
       </div>
 
-      <form onSubmit={handleSumbit} className="bg-black">
+      <form onSubmit={handleSumbit} className="bg-black mt-10">
         {/* <label>Note</label> */}
         <input
           required
