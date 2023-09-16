@@ -27,7 +27,11 @@ const index = ({ posts }) => {
         <Notes notes={posts} />
       </div>
 
-      <form onSubmit={handleSumbit} className="bg-black mt-10">
+      <form
+        onSubmit={handleSumbit}
+        className="bg-black mt-10"
+        autoComplete="off"
+      >
         {/* <label>Note</label> */}
         <input
           required
