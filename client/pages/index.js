@@ -17,11 +17,12 @@ const index = ({ posts }) => {
 
   return (
     <div>
-      <h1 className="text-xl font-bold text-[#66FF66]">TERMINAL</h1>
-      <p className="text-yellow-200 mb-5">
+      <h1 className="text-xl font-bold text-[#66FF66]">TERMINAL v0.1</h1>
+      <p className="text-[#66FF66] mb-5">
         Testing to make sure everything is working, had trouble with new nextjs
         app verions
       </p>
+      <p className="text-[#66FF66] mb-5">Worksheet 1</p>
       <div>
         <div className="flex flex-row bg-[#1b9486] text-black px-5">Notes</div>
         <Notes notes={posts} />
@@ -43,7 +44,7 @@ const index = ({ posts }) => {
           //value={form.content}
           onChange={(e) => setForm({ ...form, content: e.target.value })}
         />
-        <button className="ml-5">Create Todo</button>
+        <button className="ml-5 text-[#66FF66] b-r-1">Create Todo</button>
       </form>
     </div>
   );
