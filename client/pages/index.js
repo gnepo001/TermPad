@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/router.js";
 
 import { createPost } from "../api/index.js";
 import { Notes } from "../components/index.js";
 
 const index = ({ posts }) => {
+  const router = useRouter();
+
   const [form, setForm] = useState({
     content: "",
     author: "test",
   });
 
   const handleSumbit = (e) => {
-    e.preventDefault();
     createPost(form);
+    router.reload();
   };
 
   return (
