@@ -37,17 +37,19 @@ const index = ({ posts }) => {
         autoComplete="off"
       >
         {/* <label>Note</label> */}
-        <input
-          required
-          type="text"
-          id="note"
-          name="note"
-          placeholder="user - input"
-          className="text-[#66FF66] ml-5 bg-black"
-          //value={form.content}
-          onChange={(e) => setForm({ ...form, content: e.target.value })}
-        />
-        <button className="ml-5 text-[#66FF66] b-r-1">Create Todo</button>
+        <div className="flex flex-col w-5/6">
+          <input
+            required
+            type="text"
+            id="note"
+            name="note"
+            placeholder="user - input"
+            className="text-[#66FF66] ml-5 bg-black w-full"
+            //value={form.content}
+            onChange={(e) => setForm({ ...form, content: e.target.value })}
+          />
+          <button className="ml-5 text-[#66FF66] b-r-1">Create Todo</button>
+        </div>
       </form>
     </div>
   );
