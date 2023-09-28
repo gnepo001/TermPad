@@ -19,7 +19,7 @@ const index = ({ posts }) => {
   };
 
   return (
-    <div>
+    <div className="m-5">
       <h1 className="text-xl font-bold text-[#66FF66]">TERMINAL v0.1</h1>
       <p className="text-[#66FF66] mb-5">
         Testing to make sure everything is working, had trouble with new nextjs
