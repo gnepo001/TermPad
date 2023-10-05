@@ -10,12 +10,16 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: false,
     },
   });
 
   //load the html file
-  window.loadFile("index.html");
+  window.loadURL("http://localhost:3000");
+  //if in dev mode open browser in dev tools
+  if (is.development) {
+    window.webContents.openDevTools();
+  }
 
   //when the window is closed, reset the window object
   window.on("closed", () => {

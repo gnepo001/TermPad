@@ -4,5 +4,8 @@
   },
   "scripts": {
     "start": "electron ."
+  },
+  "dependencies": {
+    "electron-util": "^0.17.2"
   }
 }
