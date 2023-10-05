@@ -23,10 +23,10 @@ export const getNotes = async (req, res) => {
 };
 
 export const deleteNote = async (req, res) => {
-  const { id: _id } = req.params;
-  if (!mongoose.Types.ObjectId.isValid(_id)) {
+  const { id: id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).send("No post with that id");
   }
-  await Note.findByIdAndRemove(_id);
+  await Note.findByIdAndRemove(id);
   res.json({ message: "Post deleted successfully" });
 };

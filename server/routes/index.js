@@ -1,6 +1,6 @@
 import express from "express";
 
-import { createNote, getNotes } from "../controllers/note.js";
+import { createNote, getNotes, deleteNote } from "../controllers/note.js";
 import { signUp } from "../controllers/user.js";
 
 const router = express.Router();
@@ -11,5 +11,8 @@ router.post("/signup", signUp);
 
 // GET Routes
 router.get("/notes", getNotes);
+
+//delete
+router.delete("/notes/:id", deleteNote);
 
 export default router;
