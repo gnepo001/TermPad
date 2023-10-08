@@ -7,5 +7,15 @@
   },
   "dependencies": {
     "electron-util": "^0.17.2"
-  }
+  },
+  "build": {
+    "appId": "io.tester.termpad",
+    "productName": "TermPad"
+  },
+  "scripts": {
+    // add the pack and dist scripts to the existing npm scripts list
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+    }
 }
+
