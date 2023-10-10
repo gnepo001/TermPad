@@ -2,9 +2,6 @@
   "devDependencies": {
     "electron": "^26.3.0"
   },
-  "scripts": {
-    "start": "electron ."
-  },
   "dependencies": {
     "electron-util": "^0.17.2"
   },
@@ -13,7 +10,7 @@
     "productName": "TermPad"
   },
   "scripts": {
-    // add the pack and dist scripts to the existing npm scripts list
+    "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder"
     }
