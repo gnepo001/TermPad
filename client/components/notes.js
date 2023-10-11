@@ -22,7 +22,8 @@ const notes = ({ notes }) => {
             </div>
             <div className="text-[#66FF66] mx-5">{p.content}</div>
           </div>
-          <div>
+          <div className="flex flex-row">
+            <button className="mx-5">...</button>
             <button onClick={() => handleDeletion(p._id)}>X</button>
           </div>
         </div>
